@@ -74,10 +74,10 @@ def ImmGen(imm, inst):
 
         # generate imm[1] to imm[30]
         # TODO
-        imm.next[ 1] = I and inst[21] or S and inst[ 8] or UJ and inst[21]
-        imm.next[ 2] = I and inst[22] or S and inst[ 9] or UJ and inst[22]
-        imm.next[ 3] = I and inst[23] or S and inst[10] or UJ and inst[23]
-        imm.next[ 4] = I and inst[24] or S and inst[11] or UJ and inst[24] 
+        imm.next[ 1] = I and inst[21] or S and inst[ 8] or SB and inst[ 8] or UJ and inst[21]
+        imm.next[ 2] = I and inst[22] or S and inst[ 9] or SB and inst[ 9] or UJ and inst[22]
+        imm.next[ 3] = I and inst[23] or S and inst[10] or SB and inst[10] or UJ and inst[23]
+        imm.next[ 4] = I and inst[24] or S and inst[11] or SB and inst[11] or UJ and inst[24] 
 
         imm.next[ 5] = I and inst[25] or S and inst[25] or SB and inst[25] or UJ and inst[25]
         imm.next[ 6] = I and inst[26] or S and inst[26] or SB and inst[26] or UJ and inst[26]
